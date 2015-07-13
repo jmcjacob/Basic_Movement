@@ -63,27 +63,7 @@ int main (int argc, char** argv)
 
             if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
             {
-                goal.target_pose.pose.position.x = numbers[14];
-                goal.target_pose.pose.position.y = numbers[15];
-                goal.target_pose.pose.position.z = numbers[16];
-                goal.target_pose.pose.orientation.x = numbers[17];
-                goal.target_pose.pose.orientation.y = numbers[18];
-                goal.target_pose.pose.orientation.z = numbers[19];
-                goal.target_pose.pose.orientation.w = numbers[20];
-
-                ROS_INFO("Sending Third Goal");
-                ac.sendGoal(goal);
-
-                ac.waitForResult();
-
-                if (ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-                {
-                    ROS_INFO("Success");
-                }
-                else
-                {
-                    ROS_INFO("Error");
-                }
+                ROS_INFO("Success");
             }
             else
             {

@@ -22,7 +22,7 @@ int main (int argc, char** argv)
 
     MoveBaseClient ac("move_base", true);
 
-    while(!ac.waitForServer(ros::Duration(5.0)))
+    while(!ac.waitForServer(ros::Duration(5.0)) && ros::ok())
     {
         ROS_INFO("Waiting");
     }
