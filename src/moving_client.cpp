@@ -8,7 +8,7 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 
 int main (int argc, char** argv)
 {
-    std::ifstream file(argv[0]);
+    std::ifstream file(argv[]);
     std::string line;
     double numbers[21];
     int count = 0;
